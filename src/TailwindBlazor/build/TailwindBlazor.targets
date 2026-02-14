@@ -1,0 +1,20 @@
+<Project>
+  <Target Name="_TailwindEnsureCli"
+          BeforeTargets="_TailwindBuildCss"
+          Condition="!Exists('$(TailwindCliPath)') AND '$(TailwindEnabled)' == 'true'">
+    <Message Importance="High" Text="TailwindBlazor: Downloading Tailwind CLI v$(TailwindVersion) for $(_TailwindPlatform)..." />
+    <MakeDir Directories="$(TailwindCacheDir)" />
+    <DownloadFile SourceUrl="$(_TailwindDownloadUrl)" DestinationFolder="$(TailwindCacheDir)" Retries="3" />
+    <Exec Command="chmod +x &quot;$(TailwindCliPath)&quot;" Condition="'$(_IsWindows)' != 'true'" />
+  </Target>
+
+  <Target Name="_TailwindBuildCss"
+          BeforeTargets="BeforeBuild"
+          Condition="'$(TailwindEnabled)' == 'true' AND Exists('$(MSBuildProjectDirectory)/$(TailwindInputFile)')">
+    <PropertyGroup>
+      <_TailwindMinifyFlag Condition="'$(TailwindMinify)' == 'true'">--minify</_TailwindMinifyFlag>
+    </PropertyGroup>
+    <MakeDir Directories="$([System.IO.Path]::GetDirectoryName('$(MSBuildProjectDirectory)/$(TailwindOutputFile)'))" />
+    <Exec Command="&quot;$(TailwindCliPath)&quot; -i &quot;$(MSBuildProjectDirectory)/$(TailwindInputFile)&quot; -o &quot;$(MSBuildProjectDirectory)/$(TailwindOutputFile)&quot; $(_TailwindMinifyFlag)" />
+  </Target>
+</Project>

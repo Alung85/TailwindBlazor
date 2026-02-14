@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <TailwindVersion Condition="'$(TailwindVersion)' == ''">4.1.18</TailwindVersion>
+
+    <TailwindInputFile Condition="'$(TailwindInputFile)' == ''">Styles/app.css</TailwindInputFile>
+    <TailwindOutputFile Condition="'$(TailwindOutputFile)' == ''">wwwroot/css/tailwind.css</TailwindOutputFile>
+
+    <TailwindCacheDir>$([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.tailwindblazor/cli/$(TailwindVersion)</TailwindCacheDir>
+
+    <_IsWindows>$([MSBuild]::IsOSPlatform('Windows'))</_IsWindows>
+    <_IsLinux>$([MSBuild]::IsOSPlatform('Linux'))</_IsLinux>
+    <_IsOSX>$([MSBuild]::IsOSPlatform('OSX'))</_IsOSX>
+    <_OSArch>$([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)</_OSArch>
+
+    <_TailwindPlatform Condition="'$(_IsWindows)' == 'true' AND '$(_OSArch)' == 'X64'">windows-x64</_TailwindPlatform>
+    <_TailwindPlatform Condition="'$(_IsWindows)' == 'true' AND '$(_OSArch)' == 'Arm64'">windows-arm64</_TailwindPlatform>
+    <_TailwindPlatform Condition="'$(_IsOSX)' == 'true' AND '$(_OSArch)' == 'Arm64'">macos-arm64</_TailwindPlatform>
+    <_TailwindPlatform Condition="'$(_IsOSX)' == 'true' AND '$(_OSArch)' == 'X64'">macos-x64</_TailwindPlatform>
+    <_TailwindPlatform Condition="'$(_IsLinux)' == 'true' AND '$(_OSArch)' == 'X64'">linux-x64</_TailwindPlatform>
+    <_TailwindPlatform Condition="'$(_IsLinux)' == 'true' AND '$(_OSArch)' == 'Arm64'">linux-arm64</_TailwindPlatform>
+
+    <_TailwindExeExtension Condition="'$(_IsWindows)' == 'true'">.exe</_TailwindExeExtension>
+    <_TailwindExeExtension Condition="'$(_IsWindows)' != 'true'"></_TailwindExeExtension>
+
+    <TailwindCliPath>$(TailwindCacheDir)/tailwindcss-$(_TailwindPlatform)$(_TailwindExeExtension)</TailwindCliPath>
+    <_TailwindDownloadUrl>https://github.com/tailwindlabs/tailwindcss/releases/download/v$(TailwindVersion)/tailwindcss-$(_TailwindPlatform)$(_TailwindExeExtension)</_TailwindDownloadUrl>
+
+    <TailwindEnabled Condition="'$(TailwindEnabled)' == ''">true</TailwindEnabled>
+    <TailwindMinify Condition="'$(TailwindMinify)' == ''">$(Optimize)</TailwindMinify>
+  </PropertyGroup>
+</Project>
