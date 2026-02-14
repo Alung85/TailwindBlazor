@@ -6,9 +6,14 @@
     <Nullable>enable</Nullable>
     <PackageId>TailwindBlazor</PackageId>
     <Version>0.1.0</Version>
-    <Authors>TailwindBlazor Contributors</Authors>
-    <Description>Zero-config Tailwind CSS v4 integration for Blazor</Description>
-    <PackageTags>blazor;tailwind;css;tailwindcss</PackageTags>
+    <Authors>luissena</Authors>
+    <Description>Zero-config Tailwind CSS v4 integration for Blazor. Auto-downloads the CLI, generates CSS at build time via MSBuild targets, and runs watch mode in development.</Description>
+    <PackageTags>blazor;tailwind;tailwindcss;css;dotnet;aspnetcore;blazor-server;blazor-wasm;csharp</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/luissena/TailwindBlazor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/luissena/TailwindBlazor</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -19,6 +24,7 @@
   <ItemGroup>
     <None Include="build/**" Pack="true" PackagePath="build" />
     <None Include="buildTransitive/**" Pack="true" PackagePath="buildTransitive" />
+    <None Include="../../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>
