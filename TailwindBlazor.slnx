@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/SampleBlazorApp/SampleBlazorApp.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/TailwindBlazor/TailwindBlazor.csproj" />
+  </Folder>
+</Solution>
