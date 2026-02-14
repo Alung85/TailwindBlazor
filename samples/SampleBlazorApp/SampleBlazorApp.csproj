@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/TailwindBlazor/TailwindBlazor.csproj" />
+  </ItemGroup>
+
+  <!-- MSBuild targets don't flow via ProjectReference, import directly for dev -->
+  <Import Project="../../src/TailwindBlazor/build/TailwindBlazor.props" />
+  <Import Project="../../src/TailwindBlazor/build/TailwindBlazor.targets" />
+
+</Project>
