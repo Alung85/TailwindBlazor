@@ -4,4 +4,19 @@ obj/
 *.user
 *.suo
 *.nupkg
+
+# Tailwind generated output
 wwwroot/css/tailwind.css
+
+# Secrets / local overrides
+*.env
+appsettings.*.json
+!appsettings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+*.idea/
+*.vscode/
