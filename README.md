@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="samples/SampleBlazorApp/wwwroot/logo.png" alt="TailwindBlazor" width="64" height="64" />
+  <img src="samples/SampleBlazorApp/wwwroot/favicon.png" alt="TailwindBlazor" width="64" height="64" />
 </p>
 
 <h1 align="center">TailwindBlazor</h1>
