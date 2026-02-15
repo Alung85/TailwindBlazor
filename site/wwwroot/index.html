@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindBlazor — Zero-config Tailwind CSS v4 for Blazor</title>
+    <meta name="description" content="Zero-config Tailwind CSS v4 integration for Blazor. Auto CLI download, build-time CSS compilation, watch mode. One package, one line of code." />
+    <meta name="keywords" content="tailwind blazor, blazor tailwind, tailwind css blazor, blazor tailwind css, tailwindcss blazor, blazor css framework" />
+    <link rel="canonical" href="https://tailwind-blazor.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TailwindBlazor — Zero-config Tailwind CSS v4 for Blazor" />
+    <meta property="og:description" content="Zero-config Tailwind CSS v4 integration for Blazor. Auto CLI download, build-time CSS compilation, watch mode." />
+    <meta property="og:url" content="https://tailwind-blazor.com/" />
+    <meta property="og:site_name" content="TailwindBlazor" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TailwindBlazor — Zero-config Tailwind CSS v4 for Blazor" />
+    <meta name="twitter:description" content="Zero-config Tailwind CSS v4 integration for Blazor. Auto CLI download, build-time CSS compilation, watch mode." />
+
+    <base href="/" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TailwindBlazor",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Zero-config Tailwind CSS v4 integration for Blazor. Auto CLI download, build-time CSS compilation, watch mode.",
+        "url": "https://tailwind-blazor.com",
+        "license": "https://opensource.org/licenses/MIT",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "codeRepository": "https://github.com/luissena/TailwindBlazor"
+    }
+    </script>
+</head>
+
+<body class="bg-[#09090b] text-gray-100 antialiased">
+    <div id="app">
+        <!-- Fallback content for crawlers -->
+        <article>
+            <h1>TailwindBlazor</h1>
+            <p>Zero-config Tailwind CSS v4 integration for Blazor.</p>
+            <p>Auto-downloads the CLI. Compiles CSS at build time. Runs watch mode in dev. One package, one line of code.</p>
+            <h2>Quick Start</h2>
+            <ol>
+                <li>Install: dotnet add package TailwindBlazor</li>
+                <li>Create Styles/app.css with: @import "tailwindcss";</li>
+                <li>Add builder.UseTailwind(); to Program.cs</li>
+            </ol>
+            <h2>Features</h2>
+            <ul>
+                <li>Auto CLI Download — detects OS/arch, caches binary</li>
+                <li>MSBuild Integration — build-time CSS generation</li>
+                <li>Watch Mode — instant CSS rebuilds in development</li>
+                <li>Fully Configurable — MSBuild, C#, or appsettings.json</li>
+            </ul>
+        </article>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
